@@ -15,13 +15,16 @@ let pusher = new Pusher('44a39a42b28e232ab4f6', {
   cluster: 'ap1',
   encrypted: true
 });
-let slides_id = 212
+let slides_id = 212;
 
-if(!urlParams.  has('token')) {
+if(!urlParams.has('token')) {
   let channel = pusher.subscribe(slides_id + '@slides');
   channel.bind('goto', function(data) {
     Reveal.navigateTo(data.page, data.section)
   });
+} else {
+  $(".quiz-dosen").show();
+  $(".quiz-mahasiswa").hide();
 }
 
 Reveal.addEventListener('slidechanged', (event) => {
