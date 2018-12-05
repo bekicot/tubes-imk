@@ -20,6 +20,8 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
 	</head>
 	<body>
 		<div class="reveal">
@@ -93,20 +95,47 @@
 					PERBEDAAN DENGAN OBJECT BASED DATA MODEL :
 					Pada record based data model selain digunakan untuk menguraikan struktur logika keseluruhan dari suatu database, juga digunakan untuk menguraikan implementasi dari sistem database (higher level description of implementation)
 				</section>
+				<section data-background= "#00d1b2">
+	        <center><h3 class="title has-text-centered main-title" style="color: black">Pengenala Basis Data</h3></center>
+	        <h3 style="color: black">QUIZ</h3>
+          <div class="field">
+            <div class="control">
+              <input class="input is-large" type="text" placeholder="NIM">
+              <input class="input is-large" type="text" placeholder="AUTENTIFIKASI">
+            </div>
+          </div>
+          <center><button class="button is-danger is-rounded" onClick="Reveal.next();">ENTER</button></center>
+				</section>
 				<section>
-					
+					<h3 class="title has-text-centered main-title">Quiz: No 5</h3>
+          <p>Di bawah ini yang tidak bersangkutan dengan basis data adalah?</p>
+          <section class="quiz-options">
+            <ul style="width: 100%; list-style-type: none">
+              <li><button href="" class="button is-primary is-fullwidth is-medium" style="margin: 10px;" onCLick="Reveal.next();">A. SQL</button></li>
+              <li><button href="" class="button is-primary is-fullwidth is-medium" style="margin: 10px;" onCLick="Reveal.next();">B. HTML</button></li>
+              <li><button href="" class="button is-primary is-fullwidth is-medium" style="margin: 10px;" onCLick="Reveal.next();">C. Query</button></li>
+              <li><button href="" class="button is-primary is-fullwidth is-medium" style="margin: 10px;" onCLick="Reveal.next();">D. MySql</button></li>
+            </ul>
+          </section>
 				</section>
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 		<script>
 			// More info about config & dependencies:
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -115,5 +144,6 @@
 				]
 			});
 		</script>
+		<script type="text/javascript" src="js/pusher.js"></script>
 	</body>
 </html>
